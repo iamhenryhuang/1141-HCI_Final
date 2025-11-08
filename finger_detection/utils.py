@@ -173,3 +173,4 @@ def hand_pos(finger_angle, finger_points=None):
     else:
         return ''            # 無法識別
 
+
