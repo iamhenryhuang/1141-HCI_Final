@@ -146,31 +146,10 @@ def hand_pos(finger_angle, finger_points=None):
     elif f1<threshold and f2<threshold and f3>=threshold and f4>=threshold and f5<threshold:
         return 'ROCK!'       # 搖滾
     elif f1>=threshold and f2>=threshold and f3>=threshold and f4>=threshold and f5>=threshold:
-        return '0'           # 拳頭
-    elif f1>=threshold and f2<threshold and f3>=threshold and f4>=threshold and f5>=threshold:
-        return '1'           # 1
-    elif f1>=threshold and f2<threshold and f3<threshold and f4>=threshold and f5>=threshold:
-        return '2'           # 2
+        return 'fist'        # 拳頭
     elif f1>=threshold and f2>=threshold and f3<threshold and f4<threshold and f5<threshold:
         return 'ok'          # OK
     elif f1<threshold and f2>=threshold and f3<threshold and f4<threshold and f5<threshold:
         return 'ok'          # OK (另一種)
-    elif f1>=threshold and f2<threshold and f3<threshold and f4<threshold and f5>threshold:
-        return '3'           # 3
-    elif f1>=threshold and f2<threshold and f3<threshold and f4<threshold and f5<threshold:
-        return '4'           # 4
-    elif f1<threshold and f2<threshold and f3<threshold and f4<threshold and f5<threshold:
-        return '5'           # 5
-    elif f1<threshold and f2>=threshold and f3>=threshold and f4>=threshold and f5<threshold:
-        return '6'           # 6
-    elif f1<threshold and f2<threshold and f3>=threshold and f4>=threshold and f5>=threshold:
-        return '7'           # 7
-    elif f1<threshold and f2<threshold and f3<threshold and f4>=threshold and f5>=threshold:
-        return '8'           # 8
-    elif f1<threshold and f2<threshold and f3<threshold and f4<threshold and f5>=threshold:
-        return '9'           # 9
-
     else:
         return ''            # 無法識別
-
-

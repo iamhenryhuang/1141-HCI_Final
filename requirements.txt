@@ -1,0 +1,16 @@
+# 影像處理與電腦視覺
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+numpy>=1.24.0,<2.0.0
+
+# MediaPipe - 手部追蹤與偵測
+mediapipe>=0.10.0
+
+# DeepFace - 臉部情緒識別
+deepface>=0.0.79
+
+tensorflow>=2.13.0,<2.16.0
+tf-keras>=2.15.0
+
+# 圖像處理
+Pillow>=10.0.0

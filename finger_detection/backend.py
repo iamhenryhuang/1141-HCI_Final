@@ -109,4 +109,3 @@ class GestureTracker:
         """手動重置（僅供測試或管理員使用）"""
         print("手動重置計數器")
         self._reset_daily_data()
-
