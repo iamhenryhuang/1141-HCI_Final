@@ -68,13 +68,9 @@ BAD_GESTURE_THRESHOLD = 5
 GESTURE_LOG_FILE = 'gesture_log.json'
 
 # ==================== 臉部偵測與馬賽克設置 ====================
-# 臉部偵測 Haar Cascade 檔案名稱
-FACE_CASCADE_NAME = 'haarcascade_frontalface_default.xml'
-
-# 臉部偵測參數
-FACE_SCALE_FACTOR = 1.1  # 偵測縮放比例
-FACE_MIN_NEIGHBORS = 5    # 最小鄰居數（越大越嚴格）
-FACE_MIN_SIZE = (30, 30)  # 最小臉部尺寸
+# 臉部偵測參數 (MediaPipe)
+FACE_DETECTION_MIN_CONFIDENCE = 0.5
+FACE_DETECTION_MODEL_SELECTION = 0  # 0: 2公尺內 (Webcam), 1: 5公尺內 (Full range)
 
 # 臉部馬賽克效果等級（數字越大馬賽克效果越粗糙）
 FACE_MOSAIC_LEVEL = 15

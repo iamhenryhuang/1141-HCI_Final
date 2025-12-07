@@ -12,7 +12,6 @@ from config import (
     TEXT_FONT_SCALE, TEXT_THICKNESS, TEXT_COLOR, TEXT_POSITION,
     WARNING_TEXT, WARNING_FONT_SCALE, WARNING_THICKNESS, WARNING_COLOR,
     WARNING_BG_COLOR, WARNING_BG_PADDING,
-    FACE_SCALE_FACTOR, FACE_MIN_NEIGHBORS, FACE_MIN_SIZE,
     FACE_MOSAIC_LEVEL, FACE_MOSAIC_WARNING_TEXT, FACE_MOSAIC_WARNING_COLOR,
     FACE_MOSAIC_WARNING_FONT_SCALE, FACE_MOSAIC_WARNING_THICKNESS
 )
@@ -118,16 +117,8 @@ class Visualizer:
         # 顯示警告文字
         self._draw_warning_box(img, x_min, y_min, w, h, WARNING_TEXT, WARNING_COLOR)
 
-    def apply_face_mosaic(self, img, face_cascade):
+    def draw_face_mosaic(self, img, faces):
         """對臉部區域應用馬賽克"""
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(
-            gray, 
-            scaleFactor=FACE_SCALE_FACTOR,
-            minNeighbors=FACE_MIN_NEIGHBORS,
-            minSize=FACE_MIN_SIZE
-        )
-        
         for (x, y, face_w, face_h) in faces:
             # 馬賽克處理
             face_mosaic = img[y:y+face_h, x:x+face_w]
